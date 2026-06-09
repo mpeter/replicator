@@ -10,15 +10,16 @@ Patterns for coordinating parallel agent work.
 ## Coordinator Protocol
 
 1. **Initialize**: `comms_init(project_path=".", task_description="...")`
-2. **Check learnings**: `hivemind_find(query="<task keywords>")`
-3. **Select strategy**: `forge_get_strategy_insights(task="<task>")`
-4. **Decompose**: `forge_decompose(task="<task>", context="<learnings>")`
-5. **Create epic**: `org_create_epic(epic_title="<task>", subtasks=[...])`
-6. **Spawn workers**: `forge_spawn_subtask(bead_id, epic_id, subtask_title, files)`
-7. **Monitor**: `comms_inbox()` + `forge_status(epic_id, project_key)`
-8. **Review**: `forge_review(task_id, files_touched)` for each worker
-9. **Complete**: `forge_complete(bead_id, summary, files_touched)`
-10. **Learn**: `hivemind_store(information="...", tags="forge,<topic>")`
+2. **Init forge**: `forge_init(project_path=".", isolation="worktree")`
+3. **Check learnings**: `hivemind_find(query="<task keywords>")`
+4. **Select strategy**: `forge_get_strategy_insights(task="<task>")`
+5. **Decompose**: `forge_decompose(task="<task>", context="<learnings>")`
+6. **Create epic**: `org_create_epic(epic_title="<task>", subtasks=[...])`
+7. **Spawn workers**: `forge_spawn_subtask(bead_id, epic_id, subtask_title, files)`
+8. **Monitor**: `comms_inbox()` + `forge_status(epic_id, project_key)`
+9. **Review**: `forge_review(task_id, files_touched)` for each worker
+10. **Complete**: `forge_complete(bead_id, summary, files_touched)`
+11. **Learn**: `hivemind_store(information="...", tags="forge,<topic>")`
 
 ## Worker Protocol
 

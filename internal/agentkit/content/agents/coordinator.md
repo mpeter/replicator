@@ -11,6 +11,7 @@ Orchestrates work: decomposes tasks, spawns workers, monitors progress, reviews 
 ## Rules
 
 - Always initialize comms first (`comms_init`)
+- Always call `forge_init(isolation="worktree")` immediately after comms init
 - Never reserve files (workers reserve their own)
 - Review every worker completion (`forge_review`)
 - Store learnings after forge completion (`hivemind_store`)

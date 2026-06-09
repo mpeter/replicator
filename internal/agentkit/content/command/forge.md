@@ -13,14 +13,15 @@ $ARGUMENTS
 ## Workflow
 
 1. Initialize comms: `comms_init(project_path=".", task_description="Forge: <task>")`
-2. Check prior learnings: `hivemind_find(query="<task keywords>")`
-3. Decompose: `forge_decompose(task="<task>", context="<learnings>")`
-4. Create epic: `org_create_epic(epic_title="<task>", subtasks=[...])`
-5. For each subtask: `forge_spawn_subtask(bead_id, epic_id, subtask_title, files)`
-6. Monitor: check `comms_inbox()` every few minutes
-7. Review: `forge_review(task_id, files_touched)` for each completed worker
-8. Complete: `forge_complete(bead_id, summary, files_touched)`
-9. Store learnings: `hivemind_store(information="...", tags="forge,<topic>")`
+2. Initialize forge: `forge_init(project_path=".", isolation="worktree")`
+3. Check prior learnings: `hivemind_find(query="<task keywords>")`
+4. Decompose: `forge_decompose(task="<task>", context="<learnings>")`
+5. Create epic: `org_create_epic(epic_title="<task>", subtasks=[...])`
+6. For each subtask: `forge_spawn_subtask(bead_id, epic_id, subtask_title, files)`
+7. Monitor: check `comms_inbox()` every few minutes
+8. Review: `forge_review(task_id, files_touched)` for each completed worker
+9. Complete: `forge_complete(bead_id, summary, files_touched)`
+10. Store learnings: `hivemind_store(information="...", tags="forge,<topic>")`
 
 ## Rules
 
