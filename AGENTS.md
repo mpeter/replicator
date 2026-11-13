@@ -61,7 +61,7 @@ over stdio JSON-RPC. Each tool has:
 
 ## Constitution (Highest Authority)
 
-The project constitution at `.specify/memory/constitution.md`
+The project constitution at `openspec/constitution.md`
 extends the Unbound Force org constitution (v1.1.0) with four
 core principles:
 
@@ -119,7 +119,7 @@ following categories are protected:
    frontmatter `temperature`, `tools.write`, `tools.edit`,
    `tools.bash` restrictions
 6. **Constitution MUST rules** — any MUST rule in
-   `.specify/memory/constitution.md` or hero constitutions
+   `openspec/constitution.md` or hero constitutions
 7. **Review iteration limits and worker concurrency** —
    max review iterations, max concurrent Swarm workers,
    retry limits
@@ -138,8 +138,8 @@ constitution violation (CRITICAL severity).
 
 Agents MUST NOT cross workflow phase boundaries:
 
-- **Specify/Clarify/Plan/Tasks/Analyze/Checklist** phases:
-  spec artifacts ONLY (`specs/NNN-*/` directory). No
+- **Propose/Design/Specs/Tasks** phases:
+  spec artifacts ONLY (`openspec/changes/<name>/`). No
   source code, test, agent, command, or config changes.
 - **Implement** phase: source code changes allowed,
   guided by spec artifacts.
@@ -251,7 +251,7 @@ Grep tool, convention packs at
 All changes that modify production code, test code, agent
 prompts, embedded assets, or CI configuration **must** be
 preceded by a spec workflow. The constitution
-(`.specify/memory/constitution.md`) is the highest-
+(`openspec/constitution.md`) is the highest-
 authority document in this project -- all work must align
 with it.
 
@@ -284,19 +284,11 @@ CI.
 
 ## Specification Framework
 
-This project uses a two-tier specification framework:
-
-| Tier | Tool | When to Use | Location |
-|------|------|-------------|----------|
-| Strategic | Speckit | 3+ stories, architecture | `specs/NNN-*/` |
-| Tactical | OpenSpec | <3 stories, bug fix | `openspec/changes/` |
-
-### Speckit Pipeline
-
-```text
-constitution -> specify -> clarify -> plan -> tasks
-  -> analyze -> checklist -> implement
-```
+OpenSpec is the single requirements authority. Canonical
+requirements live under `openspec/specs/`; proposals,
+designs, delta specs, and tasks live under
+`openspec/changes/<name>/`. Completed strategic histories
+are preserved under `openspec/changes/archive/`.
 
 ### OpenSpec Workflow
 
@@ -324,7 +316,7 @@ require updates to:
 - `README.md` -- commands, flags, architecture
 - `AGENTS.md` -- conventions, packages, patterns
 - GoDoc comments -- exported functions and types
-- Spec artifacts under `specs/`
+- Spec artifacts under `openspec/`
 
 ### Website Documentation Gate
 
@@ -365,8 +357,7 @@ implementation begins.
 
 - **Commit format**: Conventional Commits --
   `type: description` (feat, fix, docs, chore, refactor).
-- **Branching**: Feature branches required. Speckit:
-  `NNN-<name>`. OpenSpec: `opsx/<name>`.
+- **Branching**: Feature branches required: `opsx/<name>`.
 - **Code review**: Required before merge.
 - **Semantic versioning**: For releases.
 

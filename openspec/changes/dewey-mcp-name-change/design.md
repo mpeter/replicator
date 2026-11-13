@@ -33,7 +33,7 @@ There are two layers of naming:
 
 **D2: Deprecation warnings use agent-facing names.** The `_warning` field in proxy responses tells agents what tool to use instead. These should show the OpenCode-prefixed names (`dewey_store_learning`, `dewey_semantic_search`) since that's what agents actually type.
 
-**D3: Leave spec artifacts as-is.** `specs/001-go-rewrite-phases/plan.md` and `tasks.md` reference the old names in historical task descriptions. Updating them adds noise to git history with no functional benefit.
+**D3: Leave spec artifacts as-is.** `openspec/changes/archive/2026-04-04-go-rewrite-phases/plan.md` and `tasks.md` reference the old names in historical task descriptions. Updating them adds noise to git history with no functional benefit.
 
 ## Risks / Trade-offs
 

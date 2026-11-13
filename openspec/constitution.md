@@ -84,11 +84,11 @@ environment-dependent.
 ## Development Workflow
 
 - **Spec-First Development**: All non-trivial changes MUST
-  be preceded by a spec workflow (Speckit or OpenSpec).
+  be preceded by the OpenSpec workflow.
   Exempt: constitution amendments, typo fixes, emergency
   hotfixes.
 - **Branching**: All work MUST occur on feature branches.
-  Speckit: `NNN-<name>`. OpenSpec: `opsx/<name>`.
+  Use `opsx/<name>` for OpenSpec changes.
 - **Code Review**: Every PR MUST receive review. When the
   review council is available, agents MUST run
   `/review-council` and receive APPROVE before PR

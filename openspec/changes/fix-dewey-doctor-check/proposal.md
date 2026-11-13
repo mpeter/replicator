@@ -42,7 +42,7 @@ JSON-RPC-aware mock server instead of a simple HTTP handler.
 
 ## Constitution Alignment
 
-Assessed against the Replicator constitution (`.specify/memory/constitution.md`),
+Assessed against the Replicator constitution (`openspec/constitution.md`),
 which extends the Unbound Force org constitution v1.1.0.
 
 ### I. Autonomous Collaboration

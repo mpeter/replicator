@@ -20,12 +20,12 @@
 
 - [x] 4.1 In `README.md`: replace `~/.config/swarm-tools` with `~/.config/uf/replicator`, `swarm.db` with `replicator.db`
 - [x] 4.2 In `AGENTS.md`: replace all `~/.config/swarm-tools` with `~/.config/uf/replicator`, `swarm.db` with `replicator.db`, `.hive/` with `.uf/replicator/` where referencing cell state
-- [x] 4.3 In `.specify/memory/constitution.md`: replace `swarm.db` with `replicator.db` if referenced
+- [x] 4.3 In the project constitution (now `openspec/constitution.md`): replace `swarm.db` with `replicator.db` if referenced
 
 ## 5. Spec artifacts (historical)
 
-- [x] 5.1 In `specs/001-go-rewrite-phases/`: replace `~/.config/swarm-tools/swarm.db` with `~/.config/uf/replicator/replicator.db` across spec.md, plan.md, tasks.md, quickstart.md
-- [x] 5.2 In `specs/002-charm-ux/`: replace `.unbound-force/replicator.log` with `.uf/replicator/replicator.log` across spec.md, tasks.md, plan.md, quickstart.md, research.md
+- [x] 5.1 In the strategic history (now `openspec/changes/archive/2026-04-04-go-rewrite-phases/`): replace `~/.config/swarm-tools/swarm.db` with `~/.config/uf/replicator/replicator.db` across spec.md, plan.md, tasks.md, quickstart.md
+- [x] 5.2 In the strategic history (now `openspec/changes/archive/2026-04-06-charm-ux/`): replace `.unbound-force/replicator.log` with `.uf/replicator/replicator.log` across spec.md, tasks.md, plan.md, quickstart.md, research.md
 - [x] 5.3 In `openspec/changes/add-init-command/`: replace `~/.config/swarm-tools` with `~/.config/uf/replicator` in design.md
 
 ## 6. Verify
