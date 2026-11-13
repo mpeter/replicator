@@ -32,3 +32,8 @@
 ### Requirement: No external dependencies
 
 `replicator init` MUST NOT require the SQLite database, git, network access, or any other external service to function.
+
+#### Scenario: Initialize without external services
+- **GIVEN** a writable target directory without SQLite, git, network access, or external services
+- **WHEN** `replicator init` is run
+- **THEN** initialization succeeds without those dependencies

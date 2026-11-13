@@ -42,3 +42,8 @@ A CONTRIBUTING.md MUST exist explaining development setup, testing conventions, 
 ### Requirement: CLI command list
 
 The CLI MUST include a `docs` command alongside the existing `init`, `setup`, `serve`, `cells`, `doctor`, `stats`, `query`, and `version` commands.
+
+#### Scenario: Discover CLI commands
+- **GIVEN** the Replicator CLI
+- **WHEN** its command list is inspected
+- **THEN** `docs` is available alongside `init`, `setup`, `serve`, `cells`, `doctor`, `stats`, `query`, and `version`
