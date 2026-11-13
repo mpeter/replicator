@@ -25,8 +25,8 @@ Your job is to find where tests are shallow, brittle, or missing; where coverage
 Before reviewing, read:
 
 1. `AGENTS.md` — Testing Conventions, Coding Conventions, Build & Test Commands
-2. `.specify/memory/constitution.md` — Core Principles (especially Principle IV: Testability)
-3. The relevant spec, plan, and tasks files under `specs/` for the current work
+2. `openspec/constitution.md` — Core Principles (especially Principle IV: Testability)
+3. The current change's `proposal.md`, `design.md`, and `tasks.md` under `openspec/changes/<change>/`, active requirements at `openspec/changes/<change>/specs/*/spec.md`, and relevant canonical requirements at `openspec/specs/*/spec.md`
 
 ---
 
@@ -88,11 +88,11 @@ Evaluate all recent changes (staged, unstaged, and untracked files). Use `git di
 
 ## Spec Review Mode
 
-Use this mode when the caller instructs you to review SpecKit artifacts instead of code.
+Use this mode when the caller instructs you to review OpenSpec artifacts instead of code.
 
 ### Review Scope
 
-Read **all files** under `specs/` recursively (every feature directory and every artifact: `spec.md`, `plan.md`, `tasks.md`, `data-model.md`, `research.md`, `quickstart.md`, and `checklists/`). Also read `.specify/memory/constitution.md` and `AGENTS.md` for constraint context.
+Read **all canonical specs** at `openspec/specs/*/spec.md` and **all active changes** under `openspec/changes/` (excluding `archive/`), including `specs/*/spec.md`, `proposal.md`, `design.md`, `tasks.md`, and supporting artifacts. Also read `openspec/constitution.md` and `AGENTS.md` for constraint context.
 
 Do NOT use `git diff` or review code files. Your scope is exclusively the specification artifacts.
 
@@ -149,7 +149,7 @@ For each finding, provide:
 ```
 ### [SEVERITY] Finding Title
 
-**File**: `path/to/file:line` (or `specs/NNN-feature/artifact.md` in spec review mode)
+**File**: `path/to/file:line` (or `openspec/changes/<change>/design.md` in spec review mode)
 **Constraint**: Which test quality dimension is violated
 **Description**: What the issue is and why it matters
 **Recommendation**: How to fix it

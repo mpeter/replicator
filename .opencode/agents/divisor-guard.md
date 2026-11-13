@@ -23,8 +23,8 @@ You are the intent drift detector for this project. Your job is to ensure the bu
 Before reviewing, read:
 
 1. `AGENTS.md` -- Project overview, behavioral constraints, and conventions
-2. `.specify/memory/constitution.md` -- Project constitution (core principles)
-3. The relevant `spec.md`, `plan.md`, and `tasks.md` under `specs/` for the current work
+2. `openspec/constitution.md` -- Project constitution (core principles)
+3. The current change's `proposal.md`, `design.md`, and `tasks.md` under `openspec/changes/<change>/`, active requirements at `openspec/changes/<change>/specs/*/spec.md`, and relevant canonical requirements at `openspec/specs/*/spec.md`
 4. All `*.md` files from `.opencode/unbound/packs/` -- active convention pack. If no pack files are found, note this in your findings and proceed with universal checks only.
 5. **Knowledge graph** (optional) — If Dewey MCP tools are available, use `dewey_semantic_search` to find cross-repo review patterns, recurring intent drift findings, and convention violations. Use `dewey_search` and `dewey_traverse` for structured queries. If only graph tools are available (no embedding model), use `dewey_search` and `dewey_traverse` only. If Dewey is unavailable, rely on reading files directly and using Grep for keyword search.
 
@@ -50,7 +50,7 @@ Evaluate all recent changes (staged, unstaged, and untracked files). Use `git di
 
 #### 2. Constitution Alignment
 
-- Review each principle declared in `.specify/memory/constitution.md`.
+- Review each principle declared in `openspec/constitution.md`.
 - Does the change comply with every stated principle?
 - Are there trade-offs that implicitly weaken a constitutional principle without acknowledging the trade-off?
 - If the constitution defines artifact or communication standards, are they followed?
@@ -87,7 +87,7 @@ Use this mode when the caller instructs you to review spec artifacts instead of 
 
 ### Review Scope
 
-Read **all files** under `specs/` recursively (every feature directory and every artifact: `spec.md`, `plan.md`, `tasks.md`, `data-model.md`, `research.md`, `quickstart.md`, and `checklists/`). Also read `.specify/memory/constitution.md` and `AGENTS.md` for constraint context.
+Read **all canonical specs** at `openspec/specs/*/spec.md` and **all active changes** under `openspec/changes/` (excluding `archive/`), including `specs/*/spec.md`, `proposal.md`, `design.md`, `tasks.md`, and supporting artifacts. Also read `openspec/constitution.md` and `AGENTS.md` for constraint context.
 
 Do NOT use `git diff` or review code files. Your scope is exclusively the specification artifacts.
 
@@ -146,7 +146,7 @@ For each finding, provide:
 ```
 ### [SEVERITY] Finding Title
 
-**File**: `path/to/file:line` (or `specs/NNN-feature/artifact.md` in spec review mode)
+**File**: `path/to/file:line` (or `openspec/changes/<change>/design.md` in spec review mode)
 **Spec Reference**: Which spec/acceptance criterion is affected
 **Constraint**: Which behavioral constraint is violated (Intent Drift, Neighborhood Rule, Zero-Waste, Constitution Alignment)
 **Description**: What drifted and why it matters to the user

@@ -18,7 +18,7 @@ Three different directory names from the upstream fork need consolidation:
 ### Non-Goals
 - Auto-migration from old paths (clean break)
 - Changing the `.unbound-force/config.yaml` ecosystem config (that's UF-level, not replicator-specific)
-- Changing `.opencode/` or `.specify/` directory structures
+- Changing the agent or requirements tooling directory structures
 - Modifying the LICENSE attribution text
 
 ## Decisions

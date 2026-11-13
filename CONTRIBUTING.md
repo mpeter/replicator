@@ -39,10 +39,9 @@ Always run tests with `-count=1` to disable caching.
 
 ## Pull Request Workflow
 
-1. **Create a branch**: Speckit features use `NNN-feature-name`, OpenSpec
-   changes use `opsx/change-name`.
-2. **Spec first**: Non-trivial changes require a spec (either Speckit under
-   `specs/` or OpenSpec under `openspec/changes/`). When in doubt, use a spec.
+1. **Create a branch**: OpenSpec changes use `opsx/change-name`.
+2. **Spec first**: Non-trivial changes require an OpenSpec change under
+   `openspec/changes/`. Canonical requirements live under `openspec/specs/`.
 3. **Conventional commits**: Use `type: description` format
    (feat, fix, docs, chore, refactor, test).
 4. **CI must pass**: Run `make check` locally before pushing.
