@@ -1,7 +1,7 @@
 # Implementation Plan: Terminology Rename + Agent Kit
 
 **Branch**: `003-rename-terminology` | **Date**: 2026-04-06 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `specs/003-rename-terminology/spec.md`
+**Input**: Feature specification from `openspec/changes/archive/2026-04-06-rename-terminology/spec.md`
 
 ## Summary
 
@@ -39,11 +39,11 @@ No violations. No complexity tracking needed.
 ### Documentation (this feature)
 
 ```text
-specs/003-rename-terminology/
+openspec/changes/archive/2026-04-06-rename-terminology/
 ├── plan.md              # This file
 ├── research.md          # Rename impact analysis
 ├── quickstart.md        # Implementation quick-reference
-└── tasks.md             # Phase 2 output (/speckit.tasks)
+└── tasks.md             # Phase 2 output (historical task generation)
 ```
 
 ### Source Code — Before → After
@@ -302,12 +302,12 @@ Update all documentation to use the new terminology consistently.
 **Files touched**:
 - `AGENTS.md` — naming convention table, project structure, MCP protocol example, CLI commands table, constitution references
 - `README.md` — if it references old tool names
-- `.specify/memory/constitution.md` — update "swarm mail" references to "comms", "hive" to "org"
-- `specs/003-rename-terminology/spec.md` — mark as implemented
+- `openspec/constitution.md` — update "swarm mail" references to "comms", "hive" to "org"
+- `openspec/changes/archive/2026-04-06-rename-terminology/spec.md` — mark as implemented
 
 **Risk**: LOW. Text changes only.
 
-**Checkpoint**: `grep -r 'hive_\|swarmmail_\|swarm_' AGENTS.md README.md .specify/memory/constitution.md` returns zero matches (excluding historical attribution and `hivemind_`).
+**Checkpoint**: `grep -r 'hive_\|swarmmail_\|swarm_' AGENTS.md README.md openspec/constitution.md` returns zero matches (excluding historical attribution and `hivemind_`).
 
 ---
 

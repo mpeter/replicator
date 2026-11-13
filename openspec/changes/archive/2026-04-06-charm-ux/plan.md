@@ -1,7 +1,7 @@
 # Implementation Plan: Charm Bracelet CLI UX
 
 **Branch**: `002-charm-ux` | **Date**: 2026-04-06 | **Spec**: [spec.md](spec.md)
-**Input**: Feature specification from `/specs/002-charm-ux/spec.md`
+**Input**: Feature specification from `openspec/changes/archive/2026-04-06-charm-ux/spec.md`
 
 ## Summary
 
@@ -46,11 +46,11 @@ No violations. No complexity tracking needed.
 ### Documentation (this feature)
 
 ```text
-specs/002-charm-ux/
+openspec/changes/archive/2026-04-06-charm-ux/
 ├── plan.md              # This file
 ├── research.md          # Charm library patterns + reference analysis
 ├── quickstart.md        # Verification steps
-└── tasks.md             # Phase 2 output (/speckit.tasks)
+└── tasks.md             # Phase 2 output (historical task generation)
 ```
 
 ### Source Code (repository root)

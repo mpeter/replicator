@@ -1,7 +1,7 @@
 # Implementation Plan: Go Rewrite — Remaining Phases
 
 **Branch**: `001-go-rewrite-phases` | **Date**: 2026-04-04 | **Spec**: [spec.md](./spec.md)
-**Input**: Feature specification from `/specs/001-go-rewrite-phases/spec.md`
+**Input**: Feature specification from `openspec/changes/archive/2026-04-04-go-rewrite-phases/spec.md`
 
 ## Summary
 
@@ -21,7 +21,7 @@ Complete the Go rewrite of cyborg-swarm across 5 phases: finish the hive tool su
 
 ## Constitution Check
 
-*No `.specify/memory/constitution.md` found in this repo. Applying universal principles from AGENTS.md:*
+*No `openspec/constitution.md` found in this repo at planning time. Applying universal principles from AGENTS.md:*
 
 - **TDD Everything**: All code follows Red-Green-Refactor. Tests use `db.OpenMemory()` for isolation. ✅
 - **Single Binary**: No CGo, pure Go SQLite via `modernc.org/sqlite`. ✅
@@ -33,13 +33,13 @@ Complete the Go rewrite of cyborg-swarm across 5 phases: finish the hive tool su
 ### Documentation (this feature)
 
 ```text
-specs/001-go-rewrite-phases/
+openspec/changes/archive/2026-04-04-go-rewrite-phases/
 ├── plan.md              # This file
 ├── research.md          # Library decisions and technical research
 ├── quickstart.md        # Build, test, and run commands
 ├── checklists/
 │   └── requirements.md  # Spec quality checklist (complete)
-└── tasks.md             # Task breakdown (created by /speckit.tasks)
+└── tasks.md             # Task breakdown (historical task generation)
 ```
 
 ### Source Code (repository root)

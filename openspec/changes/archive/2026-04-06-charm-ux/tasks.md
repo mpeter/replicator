@@ -1,6 +1,6 @@
 # Tasks: Charm Bracelet CLI UX
 
-**Input**: Design documents from `/specs/002-charm-ux/`
+**Input**: Design documents from `openspec/changes/archive/2026-04-06-charm-ux/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, quickstart.md
 **CI Gate**: `go vet ./...`, `go test ./... -count=1 -race`, `go build ./...`
 
@@ -159,3 +159,7 @@ Phase 0 (ui package) ──BLOCKS──┬──> Phase 1 (doctor)  ──┐
 - Mark `- [ ]` to `- [x]` immediately after each task completion
 
 <!-- spec-review: passed -->
+
+## Archive Evidence
+
+Implementation commit: `8444b33` (2026-04-06), “feat: add Charm Bracelet CLI UX with structured logging”. The commit contains this history and the implementation. Original task states are preserved; archival does not establish new verification or task completion.

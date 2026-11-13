@@ -149,7 +149,7 @@ internal/
   tools/
     registry/         Tool registration system
     hive/             Hive tool handlers
-specs/                Feature specifications
+openspec/changes/archive/  Historical feature specifications
 ```
 
 ## Environment Variables

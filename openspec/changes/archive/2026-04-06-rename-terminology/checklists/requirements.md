@@ -34,4 +34,4 @@
 - All items pass validation.
 - FR-008 lists 7 skill files but one (`forge-coordination`) appears twice (plugin skill + global skill). The implementation should create it once in `.opencode/skills/`. This is an artifact of the upstream having separate plugin-skills and global-skills directories; in replicator's delivery model they're all installed to the same location.
 - The spec references "45 non-deprecated tools" (US1) and "53 tools" (SC-001). Both are correct: 53 total = 45 renamed + 8 unchanged `hivemind_*`.
-- All decisions from the triage discussion are locked in: `forge` for orchestration, `replicator.db` stays, no migration, Speckit tier, project-local skills.
+- All decisions from the triage discussion are locked in: `forge` for orchestration, `replicator.db` stays, no migration, historical strategic specification tier, project-local skills.

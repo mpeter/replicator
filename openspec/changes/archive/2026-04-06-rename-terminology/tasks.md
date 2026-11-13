@@ -1,6 +1,6 @@
 # Tasks: Terminology Rename + Agent Kit
 
-**Input**: Design documents from `/specs/003-rename-terminology/`
+**Input**: Design documents from `openspec/changes/archive/2026-04-06-rename-terminology/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, quickstart.md
 
 ## Format: `[ID] [P?] [Story] Description`
@@ -173,10 +173,10 @@
 
 - [x] T061 [P] [US4] In `AGENTS.md`: update the naming convention table (Hive→Org, Swarm Mail→Comms, Swarm→Forge), update the project structure section (hive/→org/, swarmmail/→comms/, swarm/→forge/, tools/hive/→tools/org/, tools/swarmmail/→tools/comms/, tools/swarm/→tools/forge/), add `internal/agentkit/` to the project structure, update MCP protocol section references, update any "hive" or "swarm" references in behavioral constraints and coding conventions. Update Active Technologies section to reference new package names.
 - [x] T062 [P] [US4] In `README.md`: update the MCP Tools table categories (Hive→Org, Swarm Mail→Comms, Swarm→Forge), update the Architecture mermaid diagram domain label from "hive, swarm, mail" → "org, forge, comms", update the Package Layout section (hive/→org/, swarmmail/→comms/, swarm/→forge/, tools/hive/→tools/org/, tools/swarmmail/→tools/comms/, tools/swarm/→tools/forge/), add `agentkit/` to the package layout, update the Status section phase descriptions to use new names.
-- [x] T063 [P] [US4] In `.specify/memory/constitution.md`: update Principle I "swarm mail messaging system" → "comms messaging system". Update Principle II "hive, swarm mail, orchestration" → "org, comms, orchestration" (or "org, comms, forge").
+- [x] T063 [P] [US4] In `openspec/constitution.md`: update Principle I "swarm mail messaging system" → "comms messaging system". Update Principle II "hive, swarm mail, orchestration" → "org, comms, orchestration" (or "org, comms, forge").
 - [x] T064 [P] [US4] Verify `cmd/replicator/init.go` `Short` and `Long` descriptions were updated by T059 in Phase 6. If not, update `Short` from "swarm operations" → "project operations" and `Long` to mention agent kit scaffolding.
 
-**Checkpoint**: `grep -rn 'hive_\|swarmmail_\|swarm_' AGENTS.md README.md .specify/memory/constitution.md | grep -v hivemind_ | grep -v historical` returns zero matches (excluding historical attribution and `hivemind_`).
+**Checkpoint**: `grep -rn 'hive_\|swarmmail_\|swarm_' AGENTS.md README.md openspec/constitution.md | grep -v hivemind_ | grep -v historical` returns zero matches (excluding historical attribution and `hivemind_`).
 
 ---
 
@@ -247,3 +247,7 @@ Phase 7 (documentation) ← depends on Phase 3 (needs final names)
 - **Commit 7**: Phase 8 verification passes (no code changes, just confirmation)
 
 <!-- spec-review: passed -->
+
+## Archive Evidence
+
+Implementation commit: `5b2ccf1` (2026-04-06), “feat: rename terminology (hive→org, swarmmail→comms, swarm→forge) + ship agent kit (closes #9)”. The commit contains this history and the implementation. Original task states are preserved; archival does not establish new verification or task completion.

@@ -1,6 +1,6 @@
 # Tasks: Go Rewrite — Remaining Phases
 
-**Input**: Design documents from `/specs/001-go-rewrite-phases/`
+**Input**: Design documents from `openspec/changes/archive/2026-04-04-go-rewrite-phases/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, quickstart.md
 **Branch**: `001-go-rewrite-phases`
 
@@ -252,3 +252,7 @@ Worker D: T010–T013 (hive/sync.go + session.go)
 After domain logic completes, tool registration (T014–T020, T027–T028) and wiring (T029) are sequential.
 
 <!-- spec-review: passed -->
+
+## Archive Evidence
+
+Implementation commit: `8c1caf6` (2026-04-04), “feat: implement complete MCP tool suite (53 tools, 190+ tests)”. The commit contains this history and the implementation. Original task states are preserved; archival does not establish new verification or task completion.
